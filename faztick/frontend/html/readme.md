@@ -14,6 +14,8 @@
 This Repository made for weekly task faztrack bootcamp for HMTL practice
 </p>
 
+<a href="https://tugas-html-week-6--brilliant-dango-16f3e1.netlify.app">Check live preview here</a>
+
 <hr>
 <p align="center">
 Developed with ❤️ in Indonesia 	🇮🇩
