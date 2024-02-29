@@ -1,0 +1,403 @@
+/* details */
+
+.hero_details_section {
+  width: 100vw;
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+}
+.image_hero_background {
+  width: 100%;
+  height: 413px;
+  background-image: url(/assets/images/spiderman.png);
+  object-fit: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.movie_details__section,
+.ticket__booking_section {
+  max-width: 1366px;
+  width: 100%;
+  padding: 0px 10px;
+  margin: auto;
+}
+
+.movies_detail {
+  display: flex;
+  position: relative;
+  align-items: start;
+  gap: 15px;
+  margin-bottom: 32px;
+}
+
+.poster_image_detals {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 21%;
+  max-width: 264px;
+  height: 405px;
+  margin: -163px 0px 0 0;
+  background-image: url(/assets/images/tenet.png);
+  border-radius: 6px;
+}
+
+.movies_information {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 30px;
+}
+
+.movie_genre {
+  display: flex;
+  gap: 10px;
+}
+
+.card_tags_genre p {
+  font-size: 16px !important;
+}
+
+.movies_title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34px;
+  color: var(--text-title);
+}
+
+.detail_info {
+  display: flex;
+  align-items: start;
+  gap: 109px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info_desc {
+  color: #8692a6;
+  font-size: 14px;
+}
+
+.info_data {
+  color: var(--text-normal);
+  font-size: 16px;
+}
+.synopsys {
+  width: 90%;
+  margin-bottom: 30px;
+}
+.synopsys h2 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 34px;
+  margin-bottom: 12px;
+}
+
+.synopsys p {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 12px;
+  letter-spacing: 0.75px;
+}
+
+/* details */
+
+/* boking */
+.book_foorm_filter,
+.cinema_choose {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: end;
+}
+
+.input_container {
+  position: relative;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 34px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #4e4b66;
+  top: 63%;
+}
+
+.drop_icon {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #a0a3bd;
+  top: 62%;
+  left: 77%;
+}
+
+.input_container select {
+  -webkit-appearance: none;
+}
+
+.input_container select,
+.input_container input {
+  width: 89%;
+  padding-right: 19px;
+  padding-left: 40px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #eff0f6;
+  box-sizing: border-box;
+  height: 56px;
+}
+
+select:focus-visible,
+input:focus-visible {
+  outline: none;
+}
+
+.input_container input[type='date']::-webkit-calendar-picker-indicator,
+.input_container input[type='time']::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.book_foorm_filter button {
+  background-color: var(--blue-primary);
+  padding: 20px 76px;
+  text-align: center;
+  color: var(--neutral-gray-50);
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.cinema_choose {
+  flex-direction: column;
+}
+
+.cinema_text {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 38px;
+  display: inline-flex;
+  gap: 34px;
+}
+.cinema_text .title {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 34px;
+}
+.cinema_text .result {
+  color: #8692a6;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 34px;
+}
+
+.cinemas-wrapper {
+  width: 100%;
+  height: auto;
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 17px;
+}
+
+.cinemas {
+  width: 100%;
+  height: 157px;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.cinemas:first-child,
+.cinemas:last-child {
+  background-image: url(/assets/images/ebv.id.png);
+}
+
+.cinemas:nth-child(2) {
+  background-image: url(/assets/images/hiflix.png);
+}
+
+.cinemas:nth-child(2):active {
+  background-image: url(/assets/images/hiflix2.png);
+}
+
+.cinemas:nth-child(3) {
+  background-image: url(/assets/images/cineone.png);
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagination div {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--gray);
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.pagination div:active {
+  background-color: var(--blue-primary);
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid var(--blue-primary);
+}
+
+.ticket__booking_section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 23px;
+}
+
+.booking_submit {
+  width: 188px;
+  height: 56px;
+  margin-top: 46px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--blue-primary);
+}
+
+button:hover,
+button:active {
+  opacity: 80%;
+}
+/* boking */
+
+@media only screen and (max-width: 1024px) {
+  .hero_details_section {
+    max-width: 1024px;
+  }
+
+  .image_hero_background {
+    background-size: cover;
+    background-position: 80%;
+  }
+
+  .movie_details__section,
+  .ticket__booking_section {
+    max-width: 900px;
+    padding: 0 10px 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movie_details__section,
+  .ticket__booking_section {
+    max-width: 600px;
+    width: 90%;
+    padding: 0 10px 15px 10p;
+  }
+  .movies_detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .poster_image_detals {
+    width: 100%;
+    margin: -334px 0px 0 0;
+  }
+
+  .card_tags_genre p {
+    font-size: 14px !important;
+  }
+
+  .movies_information {
+    width: 100%;
+    align-items: center;
+  }
+
+  .movies_title {
+    text-align: center;
+  }
+
+  .detail_info {
+    gap: 30px;
+  }
+
+  .detail {
+    width: 50%;
+  }
+
+  .synopsys {
+    width: 100%;
+  }
+
+  .book_foorm_filter {
+    flex-direction: column;
+  }
+
+  .input_container select,
+  .input_container input {
+    width: 100%;
+  }
+
+  .book_foorm_filter button {
+    width: 100%;
+  }
+
+  .drop_icon {
+    left: 93%;
+  }
+  .cinema_text {
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+  }
+  .cinema_text .title {
+    display: none;
+  }
+
+  .cinemas-wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
