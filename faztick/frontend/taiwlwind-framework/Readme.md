@@ -28,7 +28,7 @@ This Repository made for weekly task faztrack bootcamp for HMTL practice with CS
 <hr>
 <h4 align="center">Ticket</h4>
 
-<img src="/faztick/frontend/taiwlwind-framework/sreenshoot/ticketpng" width="700px" alt="Ticket" />
+<img src="/faztick/frontend/taiwlwind-framework/sreenshoot/ticket.png" width="700px" alt="Ticket" />
 
 <a href="https://tugas-html-week-6--brilliant-dango-16f3e1.netlify.app">Check live preview here</a>
 
