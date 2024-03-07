@@ -14,8 +14,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet" />
+    <source src="/script/tailwind.js" />
+    <link rel="stylesheet" href="/styles/output.css" />
 
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script type="module" src="/script/main.js"></script>
   </head>
   <body>
     <div class="w-full border-b-2 border-solid border-b-gray bg-white">
@@ -31,17 +34,21 @@
           <ul
             class="sm:flex hidden items-center p-0 gap-[60px] list-none justify-center text-neutralGray900">
             <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
+              <a class="text-sm no-underline text-neutralGray900" href="/"
                 >Home</a
               >
             </li>
             <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
+              <a
+                class="text-sm no-underline text-neutralGray900"
+                href="/pages/movie-list.html"
                 >Movie</a
               >
             </li>
             <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
+              <a
+                class="text-sm no-underline text-neutralGray900"
+                href="/pages/ticket.html"
                 >Buy Ticket</a
               >
             </li>
@@ -66,18 +73,48 @@
           </div>
         </nav>
         <div class="sm:flex hidden items-center justify-items-center gap-3">
-          <button
+          <a
+            href="/pages/login.html"
             type="button"
             class="text-primary inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] bg-transparent border-2 border-solid">
             SignIn
-          </button>
-          <button
+          </a>
+          <a
+            href="/pages/register.html"
             type="button"
             class="text-neutralGray50 bg-primary border-[none] inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] border-2 border-solid border-primary">
             Sign Up
-          </button>
+          </a>
         </div>
       </header>
+      <div
+        id="mobileMenu"
+        class="sm:hidden hidden fixed w-full h-[70%] bg-white z-[999] sm:-left-full left-0 top-[106px]">
+        <ul
+          class="flex flex-col w-full h-full items-center p-0 gap-[60px] list-none justify-center">
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="/pages/movie-list.html"
+              >Movie</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="/pages/ticket.html"
+              >Buy Ticket</a
+            >
+          </li>
+        </ul>
+      </div>
       <div
         id="mobileMenu"
         class="sm:hidden hidden fixed w-full h-[70%] bg-white z-[999] sm:-left-full left-0 top-[106px]">
@@ -338,8 +375,5 @@
         </p>
       </div>
     </footer>
-
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="/renderMovies.js"></script>
   </body>
 </html>
