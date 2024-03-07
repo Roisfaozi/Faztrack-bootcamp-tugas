@@ -19,17 +19,16 @@ This Repository made for weekly task faztrack bootcamp for HMTL practice with CS
 
 <h4 align="center">Movie List</h4>
 
-<img src="/sreenshoot/movie-list.png" width="700px" alt="Movie-List" />
+<img src="/faztick/frontend/taiwlwind-framework/sreenshoot/movie-list.png" width="700px" alt="Movie-List" />
 <hr>
 <h4 align="center">Payment</h4>
 
-<img src="/sreenshoot/payment.png" width="700px" alt="Movie-List" />
-<img src="/sreenshoot/payment-mobile.png" width="700px" alt="Movie-List" />
+<img src="/faztick/frontend/taiwlwind-framework/sreenshoot/payment.png" width="700px" alt="Payment" />
+<img src="/faztick/frontend/taiwlwind-framework/sreenshoot/payment-mobile.png" width="700px" alt="Payment-Mobile" />
 <hr>
 <h4 align="center">Ticket</h4>
 
-<img src="/sreenshoot/ticketpng" width="700px" alt="Movie-List" />
-<img src="/sreenshoot/ticket-mobile.png" width="700px" alt="Movie-List" />
+<img src="/faztick/frontend/taiwlwind-framework/sreenshoot/ticketpng" width="700px" alt="Ticket" />
 
 <a href="https://tugas-html-week-6--brilliant-dango-16f3e1.netlify.app">Check live preview here</a>
 
