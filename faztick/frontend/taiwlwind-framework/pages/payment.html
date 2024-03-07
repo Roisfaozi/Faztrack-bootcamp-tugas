@@ -14,8 +14,11 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet" />
+    <source src="/script/tailwind.js" />
+    <link rel="stylesheet" href="/styles/output.css" />
 
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script type="module" src="/script/main.js"></script>
   </head>
   <body>
     <div class="w-full border-b border-solid border-b-gray bg-white">
@@ -31,17 +34,21 @@
           <ul
             class="sm:flex hidden items-center p-0 gap-[60px] list-none justify-center text-neutralGray900">
             <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
+              <a class="text-sm no-underline text-neutralGray900" href="/"
                 >Home</a
               >
             </li>
             <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
+              <a
+                class="text-sm no-underline text-neutralGray900"
+                href="/pages/movie-list.html"
                 >Movie</a
               >
             </li>
             <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
+              <a
+                class="text-sm no-underline text-neutralGray900"
+                href="/pages/ticket.html"
                 >Buy Ticket</a
               >
             </li>
@@ -66,16 +73,18 @@
           </div>
         </nav>
         <div class="sm:flex hidden items-center justify-items-center gap-3">
-          <button
+          <a
+            href="/pages/login.html"
             type="button"
             class="text-primary inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] bg-transparent border-2 border-solid">
             SignIn
-          </button>
-          <button
+          </a>
+          <a
+            href="/pages/register.html"
             type="button"
             class="text-neutralGray50 bg-primary border-[none] inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] border-2 border-solid border-primary">
             Sign Up
-          </button>
+          </a>
         </div>
       </header>
       <div
@@ -86,21 +95,21 @@
           <li>
             <a
               class="text-3xl text-neutralGray900 no-underline font-bold"
-              href="#"
+              href="/"
               >Home</a
             >
           </li>
           <li>
             <a
               class="text-3xl text-neutralGray900 no-underline font-bold"
-              href="#"
+              href="/pages/movie-list.html"
               >Movie</a
             >
           </li>
           <li>
             <a
               class="text-3xl text-neutralGray900 no-underline font-bold"
-              href="#"
+              href="/pages/ticket.html"
               >Buy Ticket</a
             >
           </li>
@@ -112,7 +121,7 @@
     <main class="w-full h-full m-auto bg-[#F5F5F5] sm:py-14 py-8">
       <section class="w-full m-auto max-w-[723px]">
         <div
-          class="flex flex-row items-center justify-center gap-3 w-full mb-8">
+          class="md:flex hidden flex-row items-center justify-center gap-3 w-full mb-8">
           <div class="flex flex-col gap-3 items-center justify-center">
             <div
               class="rounded-full text-white md:flex hidden items-center justify-center bg-[#008000] w-[47px] h-[47px]">
@@ -142,7 +151,8 @@
               <path d="M0.5 0.5H70.5" stroke="#A0A3BD" stroke-dasharray="8 8" />
             </svg>
           </div>
-          <div class="flex flex-col gap-3 items-center justify-center">
+          <div
+            class="flex-col gap-3 md:flex hidden items-center justify-center">
             <div
               class="rounded-full text-white md:flex hidden items-center justify-center bg-[#008000] w-[47px] h-[47px]">
               <svg
@@ -483,7 +493,7 @@
                 class="flex items-center justify-end flex-col p-4 gap-1 w-full"
                 style="--size: 32rem">
                 <a
-                  href="/ticket.html"
+                  href="/pages/ticket.html"
                   type="button"
                   class="flex w-full items-center justify-center py-4 font-bold text-base bg-primary text-white rounded-md hover:bg-blue-800 transition-all duration-300"
                   data-dismiss="modal">
@@ -492,6 +502,7 @@
                   ></a
                 ><button
                   type="button"
+                  data-dismiss="modal"
                   class="flex w-full items-center justify-center py-4 font-bold text-base bg-white text-primary rounded-md hover:bg-gray transition-all duration-300">
                   <span class="flex items-center justify-center space-x-2"
                     >Pay Later</span
@@ -523,9 +534,13 @@
           <ul
             class="flex flex-row flex-wrap sm:flex-col sm:gap-[14.5px] gap-[30px] h-fit m-0 p-0">
             <li class="text-sm text-textLabel"><a href="#">Cinemas</a></li>
-            <li class="text-sm text-textLabel"><a href="#">Movies List</a></li>
+            <li class="text-sm text-textLabel">
+              <a href="/pages/movie-list.html">Movies List</a>
+            </li>
             <li class="text-sm text-textLabel"><a href="#">Notification</a></li>
-            <li class="text-sm text-textLabel"><a href="#">My Tickets</a></li>
+            <li class="text-sm text-textLabel">
+              <a href="/pages/ticket.html">My Tickets</a>
+            </li>
           </ul>
         </div>
 
@@ -610,7 +625,7 @@
         </p>
       </div>
     </footer>
-    <script type="module" src="/main.js"></script>
+
     <script>
       const buttonClose = document.querySelectorAll('[data-dismiss="modal"]')
       const modal = document.querySelector('.modal')

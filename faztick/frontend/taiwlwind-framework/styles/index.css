@@ -45,7 +45,6 @@ nav {
 
 .nav-list {
   display: flex;
-  align-items: flex-start;
   padding: 0px;
   gap: 60px;
   list-style: none;
@@ -365,7 +364,7 @@ a {
   width: 135px;
   height: 30px;
   padding: 2.5px 17px;
-  background-image: url(/assets/images/recommend.png);
+  background-image: url(/public/images/recommend.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

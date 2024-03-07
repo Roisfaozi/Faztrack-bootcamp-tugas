@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickitz - The best place to find youre favorite schedule</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,39 +12,38 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet" />
-
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/output.css" />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
+
   <body>
-    <div class="w-full border-b-2 border-solid border-b-gray bg-white">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon')
+        const mobileMenu = document.querySelector('.mobile-menu')
+        console.log(menuIcon)
+        console.log(mobileMenu)
+        menuIcon.addEventListener('click', function () {
+          mobileMenu.classList.toggle('show-menu')
+        })
+      })
+    </script>
+    <div class="container">
       <!-- header -->
-      <header
-        class="flex justify-between items-center h-[104px] max-w-[1106px] mx-auto my-0 lg:px-0 px-[10px]">
+      <header>
         <div class="logo">
           <a href="/" rel="noopener noreferrer">
-            <img src="/public/images/logo.png" alt="logo" />
+            <img src="/public/images/logo.svg" alt="logo" />
           </a>
         </div>
-        <nav class="max-w-265px m-auto;">
-          <ul
-            class="sm:flex hidden items-center p-0 gap-[60px] list-none justify-center text-neutralGray900">
-            <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
-                >Movie</a
-              >
-            </li>
-            <li>
-              <a class="text-sm no-underline text-neutralGray900" href="#"
-                >Buy Ticket</a
-              >
-            </li>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/movie-list.html">Movie</a></li>
+            <li><a href="/pages/payment.html">Buy Ticket</a></li>
           </ul>
-          <div class="sm:hidden block cursor-pointer menu-icon">
+          <div class="menu-icon">
             <svg
               width="24"
               height="24"
@@ -65,166 +62,297 @@
             </svg>
           </div>
         </nav>
-        <div class="sm:flex hidden items-center justify-items-center gap-3">
-          <button
+        <div class="header_auth_wrapper">
+          <a
+            href="/pages/login.html"
             type="button"
-            class="text-primary inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] bg-transparent border-2 border-solid">
-            SignIn
-          </button>
-          <button
+            class="sign_in btn_secondary"
+            >SignIn</a
+          >
+          <a
+            href="/pages/register.html"
             type="button"
-            class="text-neutralGray50 bg-primary border-[none] inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] border-2 border-solid border-primary">
-            Sign Up
-          </button>
+            class="sign_up btn_primary"
+            >Sign Up</a
+          >
         </div>
       </header>
-      <div
-        id="mobileMenu"
-        class="sm:hidden hidden fixed w-full h-[70%] bg-white z-[999] sm:-left-full left-0 top-[106px]">
-        <ul
-          class="flex flex-col w-full h-full items-center p-0 gap-[60px] list-none justify-center">
-          <li>
-            <a
-              class="text-3xl text-neutralGray900 no-underline font-bold"
-              href="#"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-3xl text-neutralGray900 no-underline font-bold"
-              href="#"
-              >Movie</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-3xl text-neutralGray900 no-underline font-bold"
-              href="#"
-              >Buy Ticket</a
-            >
-          </li>
+      <div class="mobile-menu">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/pages/movie-list.html">Movie</a></li>
+          <li><a href="/pages/payment.html">Buy Ticket</a></li>
         </ul>
       </div>
       <!-- Header -->
     </div>
 
-    <main class="w-full h-full m-auto bg-white">
-      <section
-        class="hero_image relative bg-cover bg-no-repeat w-full :h-[262px] md:h-[362px] lg:h-[462px] bg-black flex flex-col items-center px-[10px] lg:px-10">
-        <div
-          class="w-full h-full md:px-0 pt-9 sm:pt-15 md:pt-20 lg:pt-[104px] pb-7 px-[10px] max-w-[1106px]">
-          <p
-            class="md:text-lg sm:text-base text-sm font-bold leading-[34px] text-white">
-            LIST MOVIE OF THE WEEK
-          </p>
-          <h1
-            class="lg:text-5xl sm:text-3xl text-xl font-medium leading-6 sm:leading-10 lg:leading-[70px] tracking-[1px] text-white sm:w-1/2 w-3/4 mb-12 lg:mb-[71px]">
-            Experience the Magic of Cinema: Book Your Tickets Today
-          </h1>
-          <div
-            class="w-full m-auto flex items-center justify-center gap-[11px]">
-            <div class="w-[43px] h-[6px] bg-primary rounded-md"></div>
-            <div class="w-[5px] h-[5px] bg-white rounded-md"></div>
-            <div class="w-[5px] h-[5px] bg-white rounded-md"></div>
+    <main class="main__content_container">
+      <section class="hero_section">
+        <div class="hero__content_wrapper">
+          <div class="hero__content_copy">
+            <p class="copy_tag">MOVIE TICKET PURCHASES #1 IN INDONESIA</p>
+            <h1 class="hero_title">
+              Experience the Magic of Cinema: Book Your Tickets Today
+            </h1>
+            <p class="hero_description">
+              Sign up and get the ticket with a lot of discount
+            </p>
+          </div>
+          <div class="hero__content_image">
+            <div class="hero_image_container">
+              <img src="/public/images/her-image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="why-choose-us">
+        <div class="why-choose-us__container">
+          <p class="why-choose-us__text">Why Choose Us</p>
+          <h2 class="why-choose-us__title">
+            Unleashing the Ultimate Movie Experience
+          </h2>
+          <div class="why-choose-us__cards">
+            <div class="card">
+              <div class="card_icon">
+                <svg
+                  width="18"
+                  height="20"
+                  viewBox="0 0 18 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.7281 19.9137C8.83884 19.9715 8.96266 20.0009 9.08649 20C9.21032 19.999 9.33314 19.9686 9.44489 19.9097L13.0128 18.0025C14.0245 17.4631 14.8168 16.8601 15.435 16.1579C16.779 14.6282 17.5129 12.6758 17.4998 10.6626L17.4575 4.02198C17.4535 3.25711 16.9511 2.57461 16.2082 2.32652L9.57073 0.0995642C9.17106 -0.0357592 8.73313 -0.0328174 8.3405 0.106428L1.72824 2.41281C0.989299 2.67071 0.495998 3.35811 0.500024 4.12397L0.542307 10.7597C0.555395 12.7758 1.31448 14.7194 2.68062 16.2335C3.3048 16.9258 4.10415 17.52 5.12699 18.0505L8.7281 19.9137ZM7.78357 12.1089C7.93257 12.2521 8.12586 12.3227 8.31916 12.3207C8.51245 12.3198 8.70474 12.2472 8.85172 12.1021L12.7508 8.2581C13.0438 7.96882 13.0408 7.50401 12.7448 7.21866C12.4478 6.9333 11.9696 6.93526 11.6766 7.22454L8.30808 10.5449L6.92885 9.21909C6.63186 8.93373 6.15467 8.93667 5.8607 9.22595C5.56774 9.51523 5.57076 9.98004 5.86775 10.2654L7.78357 12.1089Z"
+                    fill="#1D4ED8" />
+                </svg>
+              </div>
+              <h3 class="card_title">Guaranteed Tickets</h3>
+              <p>
+                Never miss a show! We guarantee your tickets so you can focus on
+                enjoying the movie.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card_icon">
+                <svg
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1205_1146)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.2002 21C16.9992 21 21.7002 16.299 21.7002 10.5C21.7002 4.70101 16.9992 0 11.2002 0C5.4012 0 0.700195 4.70101 0.700195 10.5C0.700195 16.299 5.4012 21 11.2002 21ZM16.1618 8.24293C16.5463 7.85852 16.5463 7.23523 16.1618 6.85082C15.7774 6.4664 15.1542 6.4664 14.7698 6.85082L9.55957 12.061L7.63063 10.1321C7.24621 9.74765 6.62293 9.74765 6.23851 10.1321C5.85409 10.5165 5.85409 11.1398 6.23851 11.5242L8.86351 14.1491C9.24793 14.5336 9.87121 14.5336 10.2556 14.1491L16.1618 8.24293Z"
+                      fill="#1D4ED8" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1205_1146">
+                      <rect
+                        width="21"
+                        height="21"
+                        fill="white"
+                        transform="translate(0.700195)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <h3 class="card_title">Affordable Prices</h3>
+              <p>
+                Enjoy the latest movies at the best prices. We offer a variety
+                of deals to fit your budget.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card_icon">
+                <svg
+                  width="26"
+                  height="23"
+                  viewBox="0 0 26 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.52518 0C1.13633 0 0 1.04375 0 2.31945V16.2362L3.78776 12.757H15.1511C16.5399 12.757 17.6762 11.7132 17.6762 10.4375V2.31945C17.6762 1.04375 16.5399 0 15.1511 0H2.52518ZM20.2014 5.79863V10.4375C20.2014 12.9959 17.9363 15.0764 15.1511 15.0764H7.57553V16.2362C7.57553 17.5119 8.71186 18.5556 10.1007 18.5556H21.464L25.2518 22.0348V8.11808C25.2518 6.84238 24.1154 5.79863 22.7266 5.79863H20.2014Z"
+                    fill="#1D4ED8" />
+                </svg>
+              </div>
+              <h3 class="card_title">24/7 Customer Support</h3>
+              <p>
+                Our friendly customer support team is always available to help
+                you with any questions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section
-        class="w-full h-full pt-12 m-auto max-w-[1106px] lg:px-0 px-[10px]">
-        <div
-          class="flex lg:flex-row flex-col gap-2 sm:gap-[10px] w-full h-full">
-          <div
-            class="lg::w-1/2 w-full h-full min-h-11 flex items-start flex-col justify-center gap-3">
-            <p class="text-base font-semibold">Cari Event</p>
-
-            <form class="w-full">
-              <label
-                for="default-search"
-                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-                >Search</label
-              >
-              <div class="relative">
-                <div
-                  class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <svg
-                    class="w-4 h-4 text-gray"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 20 20">
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                  </svg>
+      <section class="pupular__movies_section">
+        <div class="section_text">
+          <p class="section_tag">Movies</p>
+          <h2 class="section_title">
+            Exciting Movies That Should Be Watched Today
+          </h2>
+        </div>
+        <div class="movies_card__container">
+          <div class="card_wrapper">
+            <div class="movies_card">
+              <div
+                class="poster_image"
+                style="background-image: url(/public/images/black-widow.png)">
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
                 </div>
-                <input
-                  type="search"
-                  id="default-search"
-                  class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none"
-                  placeholder="New Born Expert"
-                  required />
               </div>
-            </form>
-          </div>
-          <div
-            class="w-full h-full min-h-11 flex items-start flex-col justify-center lg:gap-5 gap-2">
-            <p class="text-base font-semibold">Filter</p>
-            <div
-              class="sm:flex grid grid-cols-4 grid-rows-2 sm:item-start sm:gap-3 gap-2">
-              <div
-                class="bg-primary w-full h-full py-1 sm:py-[10px] px-4 sm:px-6 text-white rounded-lg">
-                <p class="text-sm font-normal sm:font-semibold">Thriller</p>
+
+              <div class="card__info">
+                <h3 class="card__title">Black Widow</h3>
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
               </div>
+            </div>
+            <div class="w-fit m-auto rounded-[5px]">
               <div
-                class="bg-transparent w-full h-full py-1 sm:py-[10px] px-4 sm:px-6 text-[#4E4B66] rounded-lg">
-                <p class="text-sm font-normal sm:font-semibold">Thriller</p>
+                class="relative sm:w-full max-h-[405px] max-w-[264px] sm:h-fit bg-cover bg-no-repeat bg-center h-[369px] w-60"
+                style="background-image: url(/public/images/withces.png)">
+                <div
+                  class="absolute w-[135px] h-9 bg-no-repeat bg-cover px-[17px] -left-2 top-3.5"
+                  style="background-image: url(/public/images/recommend.png)">
+                  <span class="text-white text-sm"> Recommended </span>
+                </div>
+
+                <div
+                  class="h-[405px] w-[264px] transition-[background-color] duration-[0.25s] ease-linear inline-flex items-center justify-center rounded-[5px] hover:bg-[rgba(0,0,0,0.5)] image">
+                  <div
+                    class="opacity-0 transition-transform duration-[0.24s] ease-[ease-in] delay-[0] flex flex-col gap-3 scale-0 poster">
+                    <a
+                      class="no-underline text-sm px-[69px] py-3 rounded-[7px] first:border text-white border-solid border-white"
+                      href="/pages/details.html"
+                      >Details</a
+                    >
+                    <a
+                      class="no-underline text-sm px-[69px] py-3 rounded-[7px] first:border bg-primary text-white"
+                      href="/pages/payment.html"
+                      >Buy Ticket</a
+                    >
+                  </div>
+                </div>
               </div>
-              <div
-                class="bg-transparent w-full h-full py-1 sm:py-[10px] px-4 sm:px-6 text-[#4E4B66] rounded-lg">
-                <p class="text-sm font-normal sm:font-semibold">Romantic</p>
+
+              <div class="px-0 py-[19px]">
+                <h3
+                  class="text-2xl font-bold leading-[34px] text-textTitle mb-[7px]">
+                  The Witches
+                </h3>
+                <div class="inline-flex gap-[7px]">
+                  <p
+                    class="ext-center bg-[#a0a3bd1a] text-[#a0a3bd] text-base px-[18px] py-[5px] rounded-[30px]">
+                    Action
+                  </p>
+                </div>
+                <div class="inline-flex gap-[7px]">
+                  <p
+                    class="ext-center bg-[#a0a3bd1a] text-[#a0a3bd] text-base px-[18px] py-[5px] rounded-[30px]">
+                    Adventure
+                  </p>
+                </div>
               </div>
+            </div>
+            <div class="movies_card">
               <div
-                class="bg-transparent w-full h-full py-1 sm:py-[10px] px-4 sm:px-6 text-[#4E4B66] rounded-lg">
-                <p class="text-sm font-normal sm:font-semibold">Adventure</p>
+                class="poster_image"
+                style="background-image: url(/public/images/tenet.png)">
+                <div class="badge_recemnded">
+                  <span>Recomended</span>
+                </div>
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
+                </div>
               </div>
+
+              <div class="card__info">
+                <h3 class="card__title">Tenet</h3>
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
+              </div>
+            </div>
+            <div class="movies_card">
               <div
-                class="bg-transparent w-full h-full py-1 sm:py-[10px] px-4 sm:px-6 text-[#4E4B66] rounded-lg">
-                <p class="text-sm font-normal sm:font-semibold">Sci-fi</p>
+                class="poster_image"
+                style="background-image: url(/public/images/poster-spider.png)">
+                <!-- <div class="badge_recemnded">
+                  <p>Recomended</p>
+                </div> -->
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__info">
+                <h3 class="card__title">Tenet</h3>
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="w-full h-full sm:p-0 p-[10px] mt-[55px]">
-          <div
-            id="movieList"
-            class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-center gap-x-2 gap-y-[39px]"></div>
+        <div class="section__cta">
+          <p>View All</p>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.5 10L2.5 10"
+              stroke="#1D4ED8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M12.5 5L17.5 10L12.5 15"
+              stroke="#1D4ED8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
         </div>
-        <div class="w-full h-auto my-16 flex items-center justify-center gap-5">
-          <div
-            class="md:w-10 w-8 md:h-10 h-8 sm:h-8 max-h-10 rounded-full flex items-center justify-center bg-[#F9FAFB] first:bg-primary last:bg-primary first:text-white last:text-white text-secondary">
-            <p class="text-md font-medium text-center m-auto">1</p>
+      </section>
+
+      <section class="upcomming__movies_section">
+        <div class="upcomming_section_text">
+          <div>
+            <p class="upcomming section_tag" style="margin-bottom: 20px">
+              UPCOMING MOVIES
+            </p>
+            <h2 class="upcomming section_title">Exciting Movie Coming Soon</h2>
           </div>
-          <div
-            class="md:w-10 w-8 md:h-10 h-8 sm:h-8 max-h-10 rounded-full flex items-center justify-center bg-[#F9FAFB] first:bg-primary last:bg-primary first:text-white last:text-white text-secondary">
-            <p class="text-md font-medium text-center m-auto">2</p>
-          </div>
-          <div
-            class="md:w-10 w-8 md:h-10 h-8 sm:h-8 max-h-10 rounded-full flex items-center justify-center bg-[#F9FAFB] first:bg-primary last:bg-primary first:text-white last:text-white text-secondary">
-            <p class="text-md font-medium text-center m-auto">3</p>
-          </div>
-          <div
-            class="md:w-10 w-8 md:h-10 h-8 sm:h-8 max-h-10 rounded-full flex items-center justify-center bg-[#F9FAFB] first:bg-primary last:bg-primary first:text-white last:text-white text-secondary">
-            <p class="text-md font-medium text-center m-auto">4</p>
-          </div>
-          <div
-            class="md:w-10 w-8 md:h-10 h-8 rounded-full flex items-center justify-center bg-[#F9FAFB] first:bg-primary last:bg-primary first:text-white last:text-white text-secondary">
-            <p class="text-md font-medium text-center m-auto">
+          <div class="arrow">
+            <div class="circle">
               <svg
                 width="24"
                 height="24"
@@ -232,7 +360,28 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M21 12H3"
+                  d="M3 12L21 12"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M9 18L3 12L9 6"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="circle">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 12L3 12"
                   stroke="white"
                   stroke-width="2"
                   stroke-linecap="round"
@@ -244,154 +393,210 @@
                   stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
-            </p>
+            </div>
+          </div>
+        </div>
+        <div class="movies_card__container">
+          <div class="card_wrapper">
+            <div class="movies_card">
+              <div
+                class="poster_image"
+                style="background-image: url(/public/images/black-widow.png)">
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__info">
+                <h3 class="card__title">Black Widow</h3>
+                <p class="card__date">December 2024</p>
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
+              </div>
+            </div>
+            <div class="movies_card">
+              <div
+                class="poster_image"
+                style="background-image: url(/public/images/withces.png)">
+                <!-- <div class="badge_recemnded">
+                  <p>Recomended</p>
+                </div> -->
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__info">
+                <h3 class="card__title">The Witches</h3>
+                <p class="card__date">January 2024</p>
+
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
+              </div>
+            </div>
+            <div class="movies_card">
+              <div
+                class="poster_image"
+                style="background-image: url(/public/images/tenet.png)">
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__info">
+                <h3 class="card__title">Tenet</h3>
+                <p class="card__date">June 2024</p>
+
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
+              </div>
+            </div>
+            <div class="movies_card">
+              <div
+                class="poster_image"
+                style="background-image: url(/public/images/poster-spider.png)">
+                <!-- <div class="badge_recemnded">
+                  <p>Recomended</p>
+                </div> -->
+                <div class="img">
+                  <div class="btn_movie_action">
+                    <a href="/pages/details.html">Details</a>
+                    <a href="/pages/payment.html">Buy Ticket</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card__info">
+                <h3 class="card__title">Spiderman</h3>
+                <p class="card__date">March 2024</p>
+                <div class="card_tags_genre">
+                  <p>Action</p>
+                </div>
+                <div class="card_tags_genre">
+                  <p>Adventure</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <section class="call-to-action__section">
+        <div class="call-to-action">
+          <div class="call-to-action__container">
+            <h2 class="call-to-action__title">Subscribe to our newsletter</h2>
 
-      <section class="bg-white w-full max-w-[1106px] m-auto">
-        <div
-          class="text-center text-white px-2.5 py-20 rounded-[20px] bg-[#2563EB] relative">
-          <div class="flex flex-col items-center sm:gap-12 gap-8">
-            <h2
-              class="sm:text-5xl text-2xl font-normal leading-[50px] mb-2.5 text-[32px]">
-              Subscribe to our newsletter
-            </h2>
-
-            <form
-              class="flex sm:flex-row flex-col justify-center gap-5 text-white"
-              method="POST">
+            <form class="call-to-action__form" method="POST">
               <input
-                type="text"
-                class="block w-full p-4 text-white placeholder:text-slate-300 border border-gray-300 rounded-md bg-primary text-base focus:ring-blue-300 focus:border-blue-300 focus-visible:outline-none"
-                placeholder="First name" />
+                type="name"
+                class="call-to-action__input"
+                placeholder="First name"
+                required />
               <input
                 type="email"
-                class="block w-full p-4 text-white placeholder:text-slate-300 border border-gray-300 rounded-md bg-primary text-base focus:ring-blue-300 focus:border-blue-300 focus-visible:outline-none"
+                class="call-to-action__input"
                 placeholder="Email addresss"
                 required />
-              <button
-                type="submit"
-                class="bg-white w-full py-[10px] px-5 no-underline transition-colors duration-75 ease-in-out cursor-pointer text-lg font-bold text-primary rounded-[10px] border-[none] hover:bg-[#e1dfdf]">
+              <button type="submit" class="call-to-action__button">
                 Subscribe Now
               </button>
             </form>
           </div>
-          <!-- <div
-            class="border-white border-[7px] rounded-full w-[237px] h-[229px] absolute -right-28 overflow-hidden"></div> -->
         </div>
       </section>
     </main>
 
-    <footer class="bg-white w-full px-0 py-10">
-      <div
-        class="flex flex-col sm:flex-row justify-between max-w-[1106px] mx-auto my-0">
-        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
-          <div class="mb-2.5">
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__section footer__section--info">
+          <div class="footer__title logo">
             <a href="/" rel="noopener noreferrer">
               <img src="/public/images/logo.svg" alt="logo" />
             </a>
           </div>
-          <p class="text-textLabel text-base leading-normal">
+          <p class="footer__text">
             Stop waiting in line. Buy tickets conveniently, watch movies
             quietly.
           </p>
         </div>
-
-        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
-          <h3 class="text-base font-bold mb-2.5 text-black">Explore</h3>
-          <ul
-            class="flex flex-row flex-wrap sm:flex-col sm:gap-[14.5px] gap-[30px] h-fit m-0 p-0">
-            <li class="text-sm text-textLabel"><a href="#">Cinemas</a></li>
-            <li class="text-sm text-textLabel"><a href="#">Movies List</a></li>
-            <li class="text-sm text-textLabel"><a href="#">Notification</a></li>
-            <li class="text-sm text-textLabel"><a href="#">My Tickets</a></li>
+        <div class="footer__section footer__section--explore">
+          <h3 class="footer__heading">Explore</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="#">Cinemas</a></li>
+            <li class="footer__list-item"><a href="#">Movies List</a></li>
+            <li class="footer__list-item"><a href="#">Notification</a></li>
+            <li class="footer__list-item"><a href="#">My Tickets</a></li>
           </ul>
         </div>
 
-        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
-          <h3 class="text-base font-bold mb-2.5 text-black">Our Sponsor</h3>
-          <ul
-            class="flex sm:flex-col flex-row items-start sm:gap-[13.78px] gap-[10px] m-0 p-0">
-            <li class="flex-[1_0_33.33%]">
+        <div class="footer__section footer__section--sponsor">
+          <h3 class="footer__heading">Our Sponsor</h3>
+          <ul class="footer__sponsor-list">
+            <li class="footer__sponsor-item">
               <a href="#">
-                <img
-                  class="max-w-[200px] max-h-[31px] w-full h-full"
-                  src="/public/images/ebu.svg"
-                  alt=""
-                  srcset="" />
+                <img src="/public/images/ebu.svg" alt="" srcset="" />
               </a>
             </li>
-            <li class="flex-[1_0_33.33%]">
+            <li class="footer__sponsor-item">
               <a href="#">
-                <img
-                  class="max-w-[200px] max-h-[31px] w-full h-full"
-                  src="/public/images/cineone.svg"
-                  alt=""
-                  srcset="" />
+                <img src="/public/images/cineone.svg" alt="" srcset="" />
               </a>
             </li>
-            <li class="flex-[1_0_33.33%]">
+            <li class="footer__sponsor-item">
               <a href="#">
-                <img
-                  class="max-w-[200px] max-h-[31px] w-full h-full"
-                  src="/public/images/hiflix.svg"
-                  alt=""
-                  srcset=""
+                <img src="/public/images/hiflix.svg" alt="" srcset=""
               /></a>
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-[7px] px-2.5 py-6">
-          <h3 class="text-base font-bold mb-2.5 text-black">Follow Us</h3>
-          <div class="flex sm:flex-col flex-row sm:gap-4 gap-8">
-            <a href="#" class="flex items-center justify-items-center gap-4"
-              ><img
-                src="/public/images/facebook.svg"
-                alt=""
-                srcset=""
-                class="w-6 h-6 text-[#333]" />
-              <p class="text-sm font-semibold sm:block hidden">
-                Tickitz Cinema id
-              </p>
+        <div class="footer__section footer__section--follow-us">
+          <h3 class="footer__heading">Follow Us</h3>
+          <div class="icon_wrapper">
+            <a href="#" class="footer__icon"
+              ><img src="/public/images/facebook.svg" alt="" srcset="" />
+              <p class="visually-hidden">Tickitz Cinema id</p>
             </a>
-            <a href="#" class="flex items-center justify-items-center gap-4"
-              ><img
-                src="/public/images/instagram.svg"
-                alt=""
-                srcset=""
-                class="w-6 h-6 text-[#333]" />
-              <p class="text-sm font-semibold sm:block hidden">tickitz.id</p></a
+            <a href="#" class="footer__icon"
+              ><img src="/public/images/instagram.svg" alt="" srcset="" />
+              <p class="visually-hidden">tickitz.id</p></a
             >
-            <a href="#" class="flex items-center justify-items-center gap-4"
-              ><img
-                src="/public/images/xtwitter.svg"
-                alt=""
-                srcset=""
-                class="w-6 h-6 text-[#333]" />
-              <p class="text-sm font-semibold sm:block hidden">tickitz.id</p></a
+            <a href="#" class="footer__icon"
+              ><img src="/public/images/xtwitter.svg" alt="" srcset="" />
+              <p class="visually-hidden">tickitz.id</p></a
             >
-            <a href="#" class="flex items-center justify-items-center gap-4"
-              ><img
-                src="/public/images/youtube.svg"
-                alt=""
-                srcset=""
-                class="w-6 h-6 text-[#333]" />
-              <p class="text-sm font-semibold sm:block hidden">
-                Tickitz Cinema id
-              </p>
+            <a href="#" class="footer__icon"
+              ><img src="/public/images/youtube.svg" alt="" srcset="" />
+              <p class="visually-hidden">Tickitz Cinema id</p>
             </a>
           </div>
         </div>
       </div>
-      <div class="max-w-[1106px] text-center mt-5 m-auto">
-        <p class="text-[13px] font-light px-2.5 py-6 text-textLabel">
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
           © 2020 Tickitz. All Rights Reserved.
         </p>
       </div>
     </footer>
-
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="/renderMovies.js"></script>
   </body>
 </html>

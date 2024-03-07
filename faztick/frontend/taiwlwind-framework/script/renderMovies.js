@@ -60,11 +60,13 @@ function renderMovieList(data) {
                     class="opacity-0 transition-transform duration-[0.24s] ease-[ease-in] delay-[0] flex flex-col gap-3 scale-0 poster">
                     <a
                       class="no-underline text-sm px-[69px] py-3 rounded-[7px] first:border text-white border-solid border-white"
-                      href="/details.html"
+                      href="/pages/details.html"
                       >Details</a
                     >
                     <a
                       class="no-underline text-sm px-[69px] py-3 rounded-[7px] first:border bg-primary text-white"
+                      href="/pages/payment.html"
+
                       >Buy Ticket</a
                     >
                   </div>

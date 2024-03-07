@@ -9,7 +9,7 @@
 .image_hero_background {
   width: 100%;
   height: 413px;
-  background-image: url(/assets/images/spiderman.png);
+  background-image: url(/public/images/spiderman.png);
   object-fit: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@
   max-width: 264px;
   height: 405px;
   margin: -163px 0px 0 0;
-  background-image: url(/assets/images/tenet.png);
+  background-image: url(/public/images/tenet.png);
   border-radius: 6px;
 }
 
@@ -244,19 +244,19 @@ input:focus-visible {
 
 .cinemas:first-child,
 .cinemas:last-child {
-  background-image: url(/assets/images/ebv.id.png);
+  background-image: url(/public/images/ebv.id.png);
 }
 
 .cinemas:nth-child(2) {
-  background-image: url(/assets/images/hiflix.png);
+  background-image: url(/public/images/hiflix.png);
 }
 
 .cinemas:nth-child(2):active {
-  background-image: url(/assets/images/hiflix2.png);
+  background-image: url(/public/images/hiflix2.png);
 }
 
 .cinemas:nth-child(3) {
-  background-image: url(/assets/images/cineone.png);
+  background-image: url(/public/images/cineone.png);
 }
 
 .pagination {

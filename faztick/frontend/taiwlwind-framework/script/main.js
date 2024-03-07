@@ -1,8 +1,6 @@
-import './style.css'
-
 const menuIcon = document.querySelector('.menu-icon')
 const mobileMenu = document.getElementById('mobileMenu')
-
+console.log('show')
 function showMenu() {
   menuIcon.addEventListener('click', function () {
     console.log('show')
