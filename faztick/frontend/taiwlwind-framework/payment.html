@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickitz - The best place to find youre favorite schedule</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="w-full border-b border-solid border-b-gray bg-white">
+      <!-- header -->
+      <header
+        class="flex justify-between items-center h-[104px] max-w-[1106px] mx-auto my-0 lg:px-0 px-[10px]">
+        <div class="logo">
+          <a href="/" rel="noopener noreferrer">
+            <img src="/public/images/logo.png" alt="logo" />
+          </a>
+        </div>
+        <nav class="max-w-265px m-auto;">
+          <ul
+            class="sm:flex hidden items-center p-0 gap-[60px] list-none justify-center text-neutralGray900">
+            <li>
+              <a class="text-sm no-underline text-neutralGray900" href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-sm no-underline text-neutralGray900" href="#"
+                >Movie</a
+              >
+            </li>
+            <li>
+              <a class="text-sm no-underline text-neutralGray900" href="#"
+                >Buy Ticket</a
+              >
+            </li>
+          </ul>
+          <div class="sm:hidden block cursor-pointer menu-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 6C4 5.73478 4.10536 5.48043 4.29289 5.29289C4.48043 5.10536 4.73478 5 5 5H19C19.2652 5 19.5196 5.10536 19.7071 5.29289C19.8946 5.48043 20 5.73478 20 6C20 6.26522 19.8946 6.51957 19.7071 6.70711C19.5196 6.89464 19.2652 7 19 7H5C4.73478 7 4.48043 6.89464 4.29289 6.70711C4.10536 6.51957 4 6.26522 4 6Z"
+                fill="black" />
+              <path
+                d="M4 18C4 17.7348 4.10536 17.4804 4.29289 17.2929C4.48043 17.1054 4.73478 17 5 17H19C19.2652 17 19.5196 17.1054 19.7071 17.2929C19.8946 17.4804 20 17.7348 20 18C20 18.2652 19.8946 18.5196 19.7071 18.7071C19.5196 18.8946 19.2652 19 19 19H5C4.73478 19 4.48043 18.8946 4.29289 18.7071C4.10536 18.5196 4 18.2652 4 18Z"
+                fill="black" />
+              <path
+                d="M11 11C10.7348 11 10.4804 11.1054 10.2929 11.2929C10.1054 11.4804 10 11.7348 10 12C10 12.2652 10.1054 12.5196 10.2929 12.7071C10.4804 12.8946 10.7348 13 11 13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11H11Z"
+                fill="black" />
+            </svg>
+          </div>
+        </nav>
+        <div class="sm:flex hidden items-center justify-items-center gap-3">
+          <button
+            type="button"
+            class="text-primary inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] bg-transparent border-2 border-solid">
+            SignIn
+          </button>
+          <button
+            type="button"
+            class="text-neutralGray50 bg-primary border-[none] inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] border-2 border-solid border-primary">
+            Sign Up
+          </button>
+        </div>
+      </header>
+      <div
+        id="mobileMenu"
+        class="sm:hidden hidden fixed w-full h-[70%] bg-white z-[999] sm:-left-full left-0 top-[106px]">
+        <ul
+          class="flex flex-col w-full h-full items-center p-0 gap-[60px] list-none justify-center">
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="#"
+              >Movie</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="#"
+              >Buy Ticket</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Header -->
+    </div>
+
+    <main class="w-full h-full m-auto bg-[#F5F5F5] sm:py-14 py-8">
+      <section class="w-full m-auto max-w-[723px]">
+        <div
+          class="flex flex-row items-center justify-center gap-3 w-full mb-8">
+          <div class="flex flex-col gap-3 items-center justify-center">
+            <div
+              class="rounded-full text-white md:flex hidden items-center justify-center bg-[#008000] w-[47px] h-[47px]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="text-base text-titleInfo">Dates And Time</p>
+          </div>
+          <div class="h-[47px]">
+            <svg
+              width="71"
+              height="1"
+              viewBox="0 0 71 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.5 0.5H70.5" stroke="#A0A3BD" stroke-dasharray="8 8" />
+            </svg>
+          </div>
+          <div class="flex flex-col gap-3 items-center justify-center">
+            <div
+              class="rounded-full text-white md:flex hidden items-center justify-center bg-[#008000] w-[47px] h-[47px]">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5 12L10 17L20 7"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="text-base text-titleInfo">Seat</p>
+          </div>
+          <div class="h-[47px]">
+            <svg
+              width="71"
+              height="1"
+              viewBox="0 0 71 1"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.5 0.5H70.5" stroke="#A0A3BD" stroke-dasharray="8 8" />
+            </svg>
+          </div>
+          <div class="flex flex-col gap-3 items-center justify-center">
+            <div
+              class="rounded-full text-white md:flex hidden items-center justify-center bg-primary w-[47px] h-[47px]">
+              3
+            </div>
+            <p class="text-base text-titleInfo">Payment</p>
+          </div>
+        </div>
+        <form
+          class="w-full h-full section flex flex-col items-start jutify-center gap-12 px-9 py-14 bg-white rounded-xl">
+          <div class="flex flex-col items-start jutify-center gap-3">
+            <h3 class="font-bold text-textTitle text-2xl">Payment Info</h3>
+          </div>
+
+          <div class="max-w-screen-lg w-full">
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="date"
+                name="floating_date"
+                id="floating_date"
+                class="block py-2.5 px-0 w-full text-base text-black bg-transparent border-0 border-b border-[#E6E6E6] appearance-none peer focus-visible:outline-none"
+                placeholder=""
+                required />
+              <label
+                for="floating_date"
+                class="peer-focus:font-medium absolute text-[#8692A6] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >DATE & TIME</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="text"
+                name="floating_movie"
+                id="floating_movie"
+                class="block py-2.5 px-0 w-full text-base text-black bg-transparent border-0 border-b border-[#E6E6E6] appearance-none peer focus-visible:outline-none"
+                placeholder=" "
+                required />
+              <label
+                for="floating_movie"
+                class="peer-focus:font-medium absolute text-[#8692A6] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >MOVIE TITLE</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="password"
+                name="repeat_password"
+                id="floating_repeat_password"
+                class="block py-2.5 px-0 w-full text-base text-[#000000] bg-transparent border-0 border-b border-[#E6E6E6] appearance-none peer focus-visible:outline-none"
+                placeholder=" "
+                required />
+              <label
+                for="floating_repeat_password"
+                class="peer-focus:font-medium absolute text-[#8692A6] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >CINEMA NAME</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="text"
+                name="floating_first_name"
+                id="floating_first_name"
+                class="block py-2.5 px-0 w-full text-base text-[#000000] bg-transparent border-0 border-b border-[#E6E6E6] appearance-none peer focus-visible:outline-none"
+                placeholder=" "
+                required />
+              <label
+                for="floating_first_name"
+                class="peer-focus:font-medium absolute text-[#8692A6] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >NUMBER OF TICKETS</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="floating_phone"
+                id="floating_phone"
+                class="block py-2.5 px-0 w-full text-base text-[#000000] bg-transparent border-0 border-b border-[#E6E6E6] appearance-none peer focus-visible:outline-none"
+                placeholder=" "
+                required />
+              <label
+                for="floating_phone"
+                class="peer-focus:font-medium absolute text-[#8692A6] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >NUMBER OF TICKETS</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                name="floating_phone"
+                id="floating_phone"
+                class="block py-2.5 px-0 w-full text-base bg-transparent border-0 border-b border-[#E6E6E6] appearance-none peer focus-visible:outline-none text-primary font-bold"
+                placeholder=" "
+                value=""
+                required />
+              <label
+                for="floating_phone"
+                class="peer-focus:font-medium absolute text-[#8692A6] duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >TOTAL PAYMENT</label
+              >
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-start jutify-center gap-3 max-w-screen-lg w-full">
+            <h3 class="font-bold text-textTitle text-2xl">
+              Personal Information
+            </h3>
+
+            <div
+              class="w-full max-w-screen-lg gap-x-[34px] gap-y-6 mb-6 mt-12 flex flex-col">
+              <div>
+                <label
+                  for="first_name"
+                  class="block mb-2 text-sm font-medium dark:text-white"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  class="bg-white border border-gray text-titleInfo text-base rounded-md focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                  placeholder="John"
+                  value="Jonas El Rodriguez"
+                  required />
+              </div>
+              <div>
+                <label
+                  for="last_name"
+                  class="block mb-2 text-sm font-medium dark:text-white"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  id="last_name"
+                  class="bg-white border border-gray text-titleInfo text-base rounded-md focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                  placeholder="Doe"
+                  required />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium dark:text-white"
+                  >E-mail</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  class="bg-white border border-gray text-titleInfo text-base rounded-md focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                  placeholder="jonasrodrigu123@gmail.com"
+                  required />
+              </div>
+              <div>
+                <label
+                  for="phone-input"
+                  class="mb-2 text-sm font-medium dark:text-white"
+                  >Phone number:</label
+                >
+                <div
+                  class="flex border border-gray focus:ring-primary focus:border-primary rounded-md">
+                  <select
+                    class="px-2 bg-white text-titleInfo focus:outline-none rounded-l-2xl">
+                    <option value="+1">+62</option>
+                    <option value="+44">+44</option>
+                    <option value="+91">+91</option>
+                  </select>
+                  <input
+                    type="tel"
+                    class="bg-white text-titleInfo text-base rounded-r-2xl block w-full p-5 focus-visible:outline-none"
+                    placeholder="Phone number" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-start jutify-center gap-3 max-w-screen-lg w-full">
+            <h3 class="font-bold text-textTitle text-2xl">Payment Method</h3>
+
+            <div
+              class="w-full grid gap-x-[34px] gap-y-6 mb-6 mt-12 md:grid-cols-4 grid-cols-2">
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img src="/public/images/google-pay.png" alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img src="/public/images/logos_visa.png" alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img
+                  src="/public/images/Logo GoPay (SVG-240p) - FileVector69 1.png"
+                  alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img src="/public/images/logos_paypal.png" alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img
+                  src="/public/images/Logo DANA (PNG-240p) - FileVector69 1.png"
+                  alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img
+                  src="/public/images/Bank BCA Logo (SVG-240p) - FileVector69 1.png"
+                  alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img
+                  src="/public/images/Bank BRI (Bank Rakyat Indonesia) Logo (SVG-240p) - FileVector69 1.png"
+                  alt="" />
+              </div>
+              <div
+                class="rounded-xl min-w-[130px] w-full h-full flex items-center justify-center border-2 border-gray px-6 py-3 m-auto">
+                <img src="/public/images/Vector.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <button
+            data-toggle="modal"
+            type="button"
+            class="text-white w-full bg-primary hover:bg-blue-800 font-bold rounded-lg text-base px-5 py-2.5 me-2 mb-2">
+            Pay your order
+          </button>
+          <div
+            role="dialog"
+            id="modal-example"
+            aria-hidden="false"
+            style="display: flex"
+            class="modal fixed top-0 left-0 z-50 w-screen h-screen bg-black/30 flex items-center flex-col justify-center p-6 fade"
+            tabindex="-1">
+            <div
+              class="absolute top-0 left-0 z-[0] w-full h-full"
+              tabindex="-1"></div>
+
+            <article
+              class="modal-content flex flex-col relative m-0 rounded-xl bg-white sm:my-16"
+              aria-labelledby="modal-title"
+              aria-describedby="modal-body">
+              <header class="flex p-4 items-center justify-between">
+                <h2 class="m-0 text-2xl text-center font-bold w-full">
+                  Payment Info
+                </h2>
+                <button
+                  type="button"
+                  class="flex items-center justify-center w-8 h-8 rounded-full bg-transparent transition-colors duration-300 hover:bg-black/10"
+                  data-dismiss="modal"
+                  aria-label="Close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="--size: 32rem">
+                    <line
+                      x1="18"
+                      y1="6"
+                      x2="6"
+                      y2="18"
+                      style="--size: 32rem"></line>
+                    <line
+                      x1="6"
+                      y1="6"
+                      x2="18"
+                      y2="18"
+                      style="--size: 32rem"></line>
+                  </svg>
+                </button>
+              </header>
+              <main
+                class="relative flex-[1_1_auto] max-w-[500px] p-4"
+                style="--size: 32rem">
+                <div class="mb-8 flex w-full gap-5 items-center">
+                  <p class="text-sm text-[#8692A6]">No. Rekening Virtual :</p>
+                  <p class="text-lg font-bold text-[#8692A6]">
+                    12321328913829724
+                  </p>
+                  <button
+                    type="button"
+                    class="py-2.5 px-5 text-sm font-medium text-primary focus:outline-none bg-white rounded-lg border border-primary hover:bg-blue-300">
+                    Copy
+                  </button>
+                </div>
+                <div class="mb-8 flex w-full gap-5 items-start justify-between">
+                  <p class="text-sm text-[#8692A6]">Total Payment :</p>
+                  <p class="text-lg font-bold text-primary">$30</p>
+                </div>
+                <div
+                  class="mb-8 flex gap-5 items-start justify-between text-wrap">
+                  <p class="text-base text-[#8692A6] text-justify">
+                    Pay this payment bill before it is due, on
+                    <span class="text-[#D00707]">June 23, 2023</span> . If the
+                    bill has not been paid by the specified time, it will be
+                    forfeited
+                  </p>
+                </div>
+              </main>
+              <footer
+                class="flex items-center justify-end flex-col p-4 gap-1 w-full"
+                style="--size: 32rem">
+                <a
+                  href="/ticket.html"
+                  type="button"
+                  class="flex w-full items-center justify-center py-4 font-bold text-base bg-primary text-white rounded-md hover:bg-blue-800 transition-all duration-300"
+                  data-dismiss="modal">
+                  <span class="flex items-center justify-center space-x-2"
+                    >Check Payment</span
+                  ></a
+                ><button
+                  type="button"
+                  class="flex w-full items-center justify-center py-4 font-bold text-base bg-white text-primary rounded-md hover:bg-gray transition-all duration-300">
+                  <span class="flex items-center justify-center space-x-2"
+                    >Pay Later</span
+                  >
+                </button>
+              </footer>
+            </article>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="bg-white w-full px-0 py-10">
+      <div
+        class="flex flex-col sm:flex-row justify-between max-w-[1106px] m-auto my-0">
+        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
+          <div class="mb-2.5">
+            <a href="/" rel="noopener noreferrer">
+              <img src="/public/images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <p class="text-textLabel text-base leading-normal">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </div>
+
+        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
+          <h3 class="text-base font-bold mb-2.5 text-black">Explore</h3>
+          <ul
+            class="flex flex-row flex-wrap sm:flex-col sm:gap-[14.5px] gap-[30px] h-fit m-0 p-0">
+            <li class="text-sm text-textLabel"><a href="#">Cinemas</a></li>
+            <li class="text-sm text-textLabel"><a href="#">Movies List</a></li>
+            <li class="text-sm text-textLabel"><a href="#">Notification</a></li>
+            <li class="text-sm text-textLabel"><a href="#">My Tickets</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
+          <h3 class="text-base font-bold mb-2.5 text-black">Our Sponsor</h3>
+          <ul
+            class="flex sm:flex-col flex-row items-start sm:gap-[13.78px] gap-[10px] m-0 p-0">
+            <li class="flex-[1_0_33.33%]">
+              <a href="#">
+                <img
+                  class="max-w-[200px] max-h-[31px] w-full h-full"
+                  src="/public/images/ebu.svg"
+                  alt=""
+                  srcset="" />
+              </a>
+            </li>
+            <li class="flex-[1_0_33.33%]">
+              <a href="#">
+                <img
+                  class="max-w-[200px] max-h-[31px] w-full h-full"
+                  src="/public/images/cineone.svg"
+                  alt=""
+                  srcset="" />
+              </a>
+            </li>
+            <li class="flex-[1_0_33.33%]">
+              <a href="#">
+                <img
+                  class="max-w-[200px] max-h-[31px] w-full h-full"
+                  src="/public/images/hiflix.svg"
+                  alt=""
+                  srcset=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-[7px] px-2.5 py-6">
+          <h3 class="text-base font-bold mb-2.5 text-black">Follow Us</h3>
+          <div class="flex sm:flex-col flex-row sm:gap-4 gap-8">
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/facebook.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">
+                Tickitz Cinema id
+              </p>
+            </a>
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/instagram.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">tickitz.id</p></a
+            >
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/xtwitter.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">tickitz.id</p></a
+            >
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/youtube.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">
+                Tickitz Cinema id
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1106px] text-center mt-5 m-auto">
+        <p class="text-[13px] font-light px-2.5 py-6 text-textLabel">
+          © 2020 Tickitz. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+    <script>
+      const buttonClose = document.querySelectorAll('[data-dismiss="modal"]')
+      const modal = document.querySelector('.modal')
+      const trigger = document.querySelector('[data-toggle="modal"]')
+
+      // Static backdrop
+
+      function getStaticClass(modal) {
+        modal.classList.add('astroui-modal-static')
+        document.body.style.overflow = 'hidden'
+        document.body.classList.add('astroui-modal-open')
+        setTimeout(() => {
+          modal.classList.remove('astroui-modal-static')
+        }, 100)
+      }
+
+      // Show modal
+
+      function showModal(modal) {
+        modal.style.display = 'flex'
+        setTimeout(() => {
+          modal.classList.add('show')
+        }, 100)
+        modal.setAttribute('aria-hidden', 'false')
+        document.body.style.overflow = 'hidden'
+        document.body.classList.add('astroui-modal-open')
+      }
+
+      // Remove modal
+
+      function dismissModal(modal) {
+        modal.classList.remove('show')
+        setTimeout(() => {
+          modal.style.display = 'none'
+        }, 200)
+        modal.setAttribute('aria-hidden', 'true')
+        document.body.style.overflow = ''
+        document.body.classList.remove('astroui-modal-open')
+      }
+
+      dismissModal(modal)
+
+      //
+      // Function on dismissing modal by button close
+
+      const getDismiss = (buttonClose, modal) => {
+        buttonClose.addEventListener('click', () => {
+          dismissModal(modal)
+        })
+      }
+
+      buttonClose.forEach((buttonClose) => {
+        getDismiss(buttonClose, modal)
+      })
+
+      // Open modal
+
+      trigger.addEventListener('click', () => {
+        showModal(modal)
+      })
+
+      // Close modal with press escape
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('show')) {
+          dismissModal(modal)
+        }
+      })
+    </script>
+  </body>
+</html>

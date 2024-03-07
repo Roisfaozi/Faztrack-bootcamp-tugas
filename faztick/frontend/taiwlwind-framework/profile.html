@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickitz - The best place to find youre favorite schedule</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="w-full border-b-2 border-solid border-b-gray bg-white">
+      <!-- header -->
+      <header
+        class="flex justify-between items-center h-[104px] max-w-[1106px] mx-auto my-0 lg:px-0 px-[10px]">
+        <div class="logo">
+          <a href="/" rel="noopener noreferrer">
+            <img src="/public/images/logo.png" alt="logo" />
+          </a>
+        </div>
+        <nav class="max-w-265px m-auto;">
+          <ul
+            class="sm:flex hidden items-center p-0 gap-[60px] list-none justify-center text-neutralGray900">
+            <li>
+              <a class="text-sm no-underline text-neutralGray900" href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-sm no-underline text-neutralGray900" href="#"
+                >Movie</a
+              >
+            </li>
+            <li>
+              <a class="text-sm no-underline text-neutralGray900" href="#"
+                >Buy Ticket</a
+              >
+            </li>
+          </ul>
+          <div class="sm:hidden block cursor-pointer menu-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 6C4 5.73478 4.10536 5.48043 4.29289 5.29289C4.48043 5.10536 4.73478 5 5 5H19C19.2652 5 19.5196 5.10536 19.7071 5.29289C19.8946 5.48043 20 5.73478 20 6C20 6.26522 19.8946 6.51957 19.7071 6.70711C19.5196 6.89464 19.2652 7 19 7H5C4.73478 7 4.48043 6.89464 4.29289 6.70711C4.10536 6.51957 4 6.26522 4 6Z"
+                fill="black" />
+              <path
+                d="M4 18C4 17.7348 4.10536 17.4804 4.29289 17.2929C4.48043 17.1054 4.73478 17 5 17H19C19.2652 17 19.5196 17.1054 19.7071 17.2929C19.8946 17.4804 20 17.7348 20 18C20 18.2652 19.8946 18.5196 19.7071 18.7071C19.5196 18.8946 19.2652 19 19 19H5C4.73478 19 4.48043 18.8946 4.29289 18.7071C4.10536 18.5196 4 18.2652 4 18Z"
+                fill="black" />
+              <path
+                d="M11 11C10.7348 11 10.4804 11.1054 10.2929 11.2929C10.1054 11.4804 10 11.7348 10 12C10 12.2652 10.1054 12.5196 10.2929 12.7071C10.4804 12.8946 10.7348 13 11 13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11H11Z"
+                fill="black" />
+            </svg>
+          </div>
+        </nav>
+        <div class="sm:flex hidden items-center justify-items-center gap-3">
+          <button
+            type="button"
+            class="text-primary inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] bg-transparent border-2 border-solid">
+            SignIn
+          </button>
+          <button
+            type="button"
+            class="text-neutralGray50 bg-primary border-[none] inline-block cursor-pointer text-sm font-normal text-center px-[18px] py-3 rounded-[5px] border-2 border-solid border-primary">
+            Sign Up
+          </button>
+        </div>
+      </header>
+      <div
+        id="mobileMenu"
+        class="sm:hidden hidden fixed w-full h-[70%] bg-white z-[999] sm:-left-full left-0 top-[106px]">
+        <ul
+          class="flex flex-col w-full h-full items-center p-0 gap-[60px] list-none justify-center">
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="#"
+              >Movie</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-3xl text-neutralGray900 no-underline font-bold"
+              href="#"
+              >Buy Ticket</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- Header -->
+    </div>
+
+    <main class="w-full h-full m-auto bg-[#F5F5F5] sm:py-14 py-8">
+      <div
+        class="flex lg:flex-row flex-col items-start justify-center gap-8 w-full max-w-[1226px] m-auto lg:px-0 px-[10px]">
+        <aside class="w-full h-full rounded-2xl shadow-lg bg-white p-10">
+          <div class="w-full max-w-sm">
+            <div class="flex justify-between">
+              <p class="p-1.5 h-full text-titleInfo text-base">INFO</p>
+
+              <button
+                id="dropdownButton"
+                data-dropdown-toggle="dropdown"
+                class="inline-block text-[#5F2EEA] hover:bg-gray rounded-lg text-sm p-1.5"
+                type="button">
+                <span class="sr-only">Open dropdown</span>
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 16 3">
+                  <path
+                    d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col items-center pb-10">
+              <img src="/public/images/profile-page.png" alt="Bonnie image" />
+              <h5 class="mb-1 mt-4 text-xl font-semibold text-titleInfo">
+                Jonas El Rodriguez
+              </h5>
+              <span class="text-sm text-titleInfo">Moviegoers</span>
+            </div>
+            <hr class="text-gray" />
+            <div
+              class="pt-10 flex flex-col items-center justify-center relative">
+              <div
+                class="flex flex-col items-start justify-center w-full gap-6">
+                <p class="text-base font-semibold text-titleInfo">
+                  Loyalty Points
+                </p>
+                <img
+                  class="w-full h-full bottom-0 left-24"
+                  src="/public/images/card.png"
+                  alt="" />
+              </div>
+              <div class="text-base text-textTitle mb-4">
+                180 points become a master
+              </div>
+              <div
+                class="flex w-full h-4 bg-[#F5F6F8] shadow-inner rounded-full overflow-hidden"
+                role="progressbar"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                <div
+                  class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap dark:bg-blue-500 transition duration-500"
+                  style="width: 25%"></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="w-full flex items-center flex-col gap-12">
+          <div
+            class="w-full lg:w-[866px] flex sm:flex-row flex-col gap-4 px-12 bg-white rounded-2xl shadow-lg">
+            <div
+              class="w-max min-w-[153px] h-max border-b-2 border-b-primary flex items-center text-textTitle text-lg text-center cursor-pointer select-none">
+              <div class="p-[25px] w-full">
+                <a href="/profile.html">Account Settings</a>
+              </div>
+            </div>
+            <div
+              class="w-max min-w-[153px] h-max flex items-center text-background text-lg text-center cursor-pointer select-none">
+              <div class="p-[25px] w-full">
+                <a href="/order-history.html">Order History</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl w-full h-full px-8 pt-10 pb-16 m-auto flex flex-col items-center shadow-lg">
+            <div class="w-full border-b border-b-gray">
+              <p class="text-base text-textTitle">Details Information</p>
+            </div>
+
+            <div
+              class="w-full grid gap-x-[34px] gap-y-6 mb-6 mt-12 md:grid-cols-2">
+              <div>
+                <label
+                  for="first_name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  class="bg-slate-100 border border-gray text-titleInfo text-base rounded-2xl focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                  placeholder="John"
+                  required />
+              </div>
+              <div>
+                <label
+                  for="last_name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  id="last_name"
+                  class="bg-slate-100 border border-gray text-titleInfo text-base rounded-2xl focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                  placeholder="Doe"
+                  required />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >E-mail</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  class="bg-slate-100 border border-gray text-titleInfo text-base rounded-2xl focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                  placeholder="jonasrodrigu123@gmail.com"
+                  required />
+              </div>
+              <div>
+                <label
+                  for="phone-input"
+                  class="mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Phone number:</label
+                >
+                <div
+                  class="flex border border-gray focus:ring-primary focus:border-primary rounded-2xl">
+                  <select
+                    class="px-2 bg-slate-100 text-gray-700 focus:outline-none rounded-l-2xl">
+                    <option value="+1">+62</option>
+                    <option value="+44">+44</option>
+                    <option value="+91">+91</option>
+                  </select>
+                  <input
+                    type="tel"
+                    class="bg-slate-100 text-titleInfo text-base rounded-r-2xl block w-full p-5 focus-visible:outline-none"
+                    placeholder="Phone number" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl w-full h-full px-8 pt-10 pb-16 m-auto flex flex-col items-center shadow-lg">
+            <div class="w-full border-b border-b-gray">
+              <p class="text-base text-textTitle">Account and Privacy</p>
+            </div>
+
+            <div
+              class="w-full grid gap-x-[34px] gap-y-6 mb-6 mt-12 md:grid-cols-2">
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Password</label
+                >
+                <div class="relative">
+                  <input
+                    id="hs-toggle-password"
+                    type="password"
+                    class="bg-slate-100 border border-gray text-titleInfo text-base rounded-2xl focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                    placeholder="Enter password"
+                    value="" />
+                  <button
+                    type="button"
+                    data-hs-toggle-password='{
+        "target": "#hs-toggle-password"
+      }'
+                    class="absolute h-full top-0 end-0 p-3.5 rounded-e-md">
+                    <svg
+                      class="flex-shrink-0 size-3.5 text-gray-400 dark:text-neutral-600"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <path
+                        class="hs-password-active:hidden"
+                        d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+                      <path
+                        class="hs-password-active:hidden"
+                        d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+                      <path
+                        class="hs-password-active:hidden"
+                        d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+                      <line
+                        class="hs-password-active:hidden"
+                        x1="2"
+                        x2="22"
+                        y1="2"
+                        y2="22" />
+                      <path
+                        class="hidden hs-password-active:block"
+                        d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                      <circle
+                        class="hidden hs-password-active:block"
+                        cx="12"
+                        cy="12"
+                        r="3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Password</label
+                >
+                <div class="relative">
+                  <input
+                    id="hs-toggle-password"
+                    type="password"
+                    class="bg-slate-100 border border-gray text-titleInfo text-base rounded-2xl focus:ring-primary focus:border-primary block w-full p-5 focus-visible:outline-none"
+                    placeholder="Enter password"
+                    value="" />
+                  <button
+                    type="button"
+                    data-hs-toggle-password='{
+        "target": "#hs-toggle-password"
+      }'
+                    class="absolute h-full top-0 end-0 p-3.5 rounded-e-md">
+                    <svg
+                      class="flex-shrink-0 size-3.5 text-gray-400 dark:text-neutral-600"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <path
+                        class="hs-password-active:hidden"
+                        d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+                      <path
+                        class="hs-password-active:hidden"
+                        d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+                      <path
+                        class="hs-password-active:hidden"
+                        d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+                      <line
+                        class="hs-password-active:hidden"
+                        x1="2"
+                        x2="22"
+                        y1="2"
+                        y2="22" />
+                      <path
+                        class="hidden hs-password-active:block"
+                        d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                      <circle
+                        class="hidden hs-password-active:block"
+                        cx="12"
+                        cy="12"
+                        r="3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="py-3 w-full max-w-[360px] px-4 text-center text-base font-bold rounded-lg border border-transparent bg-primary text-white hover:bg-blue-600">
+            Update changes
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white w-full px-0 py-10">
+      <div
+        class="flex flex-col sm:flex-row justify-between max-w-[1106px] mx-auto my-0">
+        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
+          <div class="mb-2.5">
+            <a href="/" rel="noopener noreferrer">
+              <img src="/public/images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <p class="text-textLabel text-base leading-normal">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </div>
+
+        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
+          <h3 class="text-base font-bold mb-2.5 text-black">Explore</h3>
+          <ul
+            class="flex flex-row flex-wrap sm:flex-col sm:gap-[14.5px] gap-[30px] h-fit m-0 p-0">
+            <li class="text-sm text-textLabel"><a href="#">Cinemas</a></li>
+            <li class="text-sm text-textLabel"><a href="#">Movies List</a></li>
+            <li class="text-sm text-textLabel"><a href="#">Notification</a></li>
+            <li class="text-sm text-textLabel"><a href="#">My Tickets</a></li>
+          </ul>
+        </div>
+
+        <div class="flex-[1_0_13%] items-start justify-center px-2.5 py-6">
+          <h3 class="text-base font-bold mb-2.5 text-black">Our Sponsor</h3>
+          <ul
+            class="flex sm:flex-col flex-row items-start sm:gap-[13.78px] gap-[10px] m-0 p-0">
+            <li class="flex-[1_0_33.33%]">
+              <a href="#">
+                <img
+                  class="max-w-[200px] max-h-[31px] w-full h-full"
+                  src="/public/images/ebu.svg"
+                  alt=""
+                  srcset="" />
+              </a>
+            </li>
+            <li class="flex-[1_0_33.33%]">
+              <a href="#">
+                <img
+                  class="max-w-[200px] max-h-[31px] w-full h-full"
+                  src="/public/images/cineone.svg"
+                  alt=""
+                  srcset="" />
+              </a>
+            </li>
+            <li class="flex-[1_0_33.33%]">
+              <a href="#">
+                <img
+                  class="max-w-[200px] max-h-[31px] w-full h-full"
+                  src="/public/images/hiflix.svg"
+                  alt=""
+                  srcset=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-[7px] px-2.5 py-6">
+          <h3 class="text-base font-bold mb-2.5 text-black">Follow Us</h3>
+          <div class="flex sm:flex-col flex-row sm:gap-4 gap-8">
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/facebook.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">
+                Tickitz Cinema id
+              </p>
+            </a>
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/instagram.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">tickitz.id</p></a
+            >
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/xtwitter.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">tickitz.id</p></a
+            >
+            <a href="#" class="flex items-center justify-items-center gap-4"
+              ><img
+                src="/public/images/youtube.svg"
+                alt=""
+                srcset=""
+                class="w-6 h-6 text-[#333]" />
+              <p class="text-sm font-semibold sm:block hidden">
+                Tickitz Cinema id
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1106px] text-center mt-5 m-auto">
+        <p class="text-[13px] font-light px-2.5 py-6 text-textLabel">
+          © 2020 Tickitz. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

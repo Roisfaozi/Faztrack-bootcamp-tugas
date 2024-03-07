@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Mulish', sans-serif;
+  --blue-primary: #1d4ed8;
+  --secondary: #a0a3bd;
+  --important: #d00707;
+  --active: #00ba88;
+  --title-info: #4e4b66;
+  --title-info-2: #a0a3bd;
+  --background: #aaaaaa;
+  --title-info: #f5f6f8;
+  --neutral-gray-900: #0f172a;
+  --neutral-gray-50: #f8fafc;
+  --text-label: #6e7191;
+  --text-title: #14142b;
+  --gray: #dedede;
+  --text-normal: #121212;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @apply bg-white;
+}
+
+@media only screen and (max-width: 768px) {
+  .show-menu {
+    display: block !important;
+  }
+}
+
+.hero_image {
+  background-image: url(/public/images/hero-1.png);
+  background-position: top center;
+  object-fit: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.image_bg {
+  background-image: url(/public/images/hero-2.png);
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background-size: 150%;
+  background-repeat: no-repeat;
+}
+
+.image:hover .poster {
+  @apply opacity-100 !scale-100;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.modal.fade .modal-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+}
+.modal.show .modal-content {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.modal-content {
+  transform: scale(1.1);
+  transition: visibility 0.25s ease-out, opacity 0.25s ease-out,
+    transform 0.25s ease-out;
+}
+
+/** Modal static */
+
+.modal.modal-static .modal-content {
+  transform: scale(1.02);
+}
